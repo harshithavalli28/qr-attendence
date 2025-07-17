@@ -1,0 +1,134 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body with background logo */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f7fa;
+  background-image: url('/public/vts.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 200px;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Optional faded overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/public/vts.png') no-repeat center center;
+  background-size: 200px;
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Header */
+header {
+  background-color: #004d99;
+  padding: 15px 0;
+  color: white;
+  position: relative;
+}
+
+nav.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Nav links */
+nav.container a {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+nav.container a:hover {
+  text-decoration: underline;
+}
+
+/* Layout container */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card layout */
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+table th {
+  background-color: #f0f2f5;
+}
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 15px;
+}
